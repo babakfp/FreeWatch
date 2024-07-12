@@ -18,6 +18,8 @@
                 <a
                     class="grid gap-2 rounded bg-gray-800 p-4 hover:bg-gray-700 sm:p-6"
                     href={platform.url}
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
                 >
                     <h3 class="text-lg font-bold">
                         {platform.name}
