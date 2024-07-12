@@ -12,6 +12,7 @@
         "@sveltejs/vite-plugin-svelte": "3.1.1",
         "autoprefixer": "10.4.19",
         "cssnano": "7.0.4",
+        "phosphor-icons-svelte": "1.2.0",
         "postcss": "8.4.39",
         "prettier": "3.3.2",
         "prettier-plugin-svelte": "3.2.5",

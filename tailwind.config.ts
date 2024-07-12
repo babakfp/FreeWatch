@@ -1,13 +1,19 @@
 import type { Config } from "tailwindcss"
 import { allAddons } from "tailwindcss-addons"
+import colors from "tailwindcss/colors"
 
 export default {
     content: ["./src/**/*.{html,svelte}"],
     plugins: [...allAddons()],
     theme: {
+        extend: {
+            colors: {
+                gray: colors.zinc,
+            },
+        },
         container: {
             center: true,
-            padding: "2rem",
+            padding: "1rem",
         },
         fontFamily: {
             sans: ["Recursive"],
