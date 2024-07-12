@@ -9,6 +9,9 @@ export default {
             center: true,
             padding: "2rem",
         },
+        fontFamily: {
+            sans: ["Recursive"],
+        },
     },
     future: {
         hoverOnlyWhenSupported: true,
