@@ -48,13 +48,6 @@
                                 conText="Possibly shows ads."
                             />
                         </li>
-                        {#if platform.downloadRestrictions?.allowedCountries?.length}
-                            <li>
-                                Downloads are restricted to {platform.downloadRestrictions?.allowedCountries?.join(
-                                    ", ",
-                                )}.
-                            </li>
-                        {/if}
                         <li>
                             <ProsConsItem
                                 status={false}

@@ -7,9 +7,6 @@ type Platform = {
     canDownload?: boolean
     canWatchOnline?: boolean
     possiblyShowsAds?: boolean
-    downloadRestrictions?: {
-        allowedCountries?: "Iran"[]
-    }
 }
 
 export const platforms: Platform[] = [
@@ -20,9 +17,6 @@ export const platforms: Platform[] = [
         contentTypes: ["Movies", "Series", "Anime"],
         languages: ["Persian"],
         canDownload: true,
-        downloadRestrictions: {
-            allowedCountries: ["Iran"],
-        },
     },
     {
         name: "HiAnime",
