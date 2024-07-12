@@ -1,4 +1,4 @@
-type Platform = {
+export type Platform = {
     name: string
     url: `https://${string}.${string}`
     description: `${string}.`
