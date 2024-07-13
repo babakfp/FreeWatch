@@ -15,7 +15,7 @@
     target="_blank"
     rel="noopener noreferrer nofollow"
 >
-    <div class="relative flex justify-between">
+    <div class="relative">
         <h3 class="text-xl font-bold">
             {platform.name}
         </h3>
