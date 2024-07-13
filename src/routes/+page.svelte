@@ -28,8 +28,8 @@
     </ul>
 </main>
 
-<footer class="container border-t border-gray-800 py-8">
-    <ul class="list-inside list-disc space-y-2 text-sm">
+<footer class="border-t border-gray-800 py-8">
+    <ul class="container list-inside list-disc space-y-2 text-sm">
         <li>
             Made by
             <a
