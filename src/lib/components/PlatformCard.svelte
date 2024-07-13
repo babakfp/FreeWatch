@@ -59,6 +59,13 @@
         </li>
         <li>
             <PlatformCardProsConsItem
+                status={platform.isFrecuentlyUpdated}
+                proText="Frecuently updated."
+                conText="Isn't frecuently updated."
+            />
+        </li>
+        <li>
+            <PlatformCardProsConsItem
                 status={false}
                 proText="Doesn't need VPN."
                 conText="Possibly needs VPN."

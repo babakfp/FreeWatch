@@ -5,9 +5,14 @@ export const getPlatformScore = (platform: Platform) => {
 
     if (platform.canDownload) {
         score += 1
+    } else {
+        score -= 1
     }
+
     if (platform.canWatchOnline) {
         score += 1
+    } else {
+        score -= 1
     }
 
     if (platform.possiblyShowsAds) {
@@ -16,11 +21,13 @@ export const getPlatformScore = (platform: Platform) => {
         score += 1
     }
 
-    if (platform.languages.includes("English")) {
+    if (platform.isFrecuentlyUpdated) {
         score += 1
     } else {
         score -= 1
     }
+
+    score += platform.contentTypes.length
 
     if (
         platform.contentTypes.length === 1 &&
@@ -29,14 +36,13 @@ export const getPlatformScore = (platform: Platform) => {
         score += 2
     }
 
-    if (platform.isFrecuentlyUpdated) {
+    score += platform.languages.length
+
+    if (platform.languages.includes("English")) {
         score += 1
     } else {
         score -= 1
     }
-
-    score += platform.languages.length
-    score += platform.contentTypes.length
 
     return score
 }
