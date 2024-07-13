@@ -1,4 +1,5 @@
 <script lang="ts">
+    import IconCheckSquareFill from "phosphor-icons-svelte/IconCheckSquareFill.svelte"
     import IconSealFill from "phosphor-icons-svelte/IconSealFill.svelte"
     import PlatformCardProsConsItem from "$lib/components/PlatformCardProsConsItem.svelte"
     import type { Platform } from "$lib/data"
@@ -27,9 +28,14 @@
     <p class="text-2xs text-gray-400">{platform.url}</p>
     <p>{platform.description}</p>
     <ul>
-        <li>Site in {platform.languages.join(", ")}.</li>
-        <li>Supports {platform.contentTypes.join(", ")}.</li>
-        <div class="h-2" />
+        <li class="flex items-center gap-1 text-blue-100">
+            <IconCheckSquareFill class="text-blue-400" />
+            Site in {platform.languages.join(", ")}.
+        </li>
+        <li class="flex items-center gap-1 text-blue-100">
+            <IconCheckSquareFill class="text-blue-400" />
+            Supports {platform.contentTypes.join(", ")}.
+        </li>
         <li>
             <PlatformCardProsConsItem
                 status={platform.canDownload}

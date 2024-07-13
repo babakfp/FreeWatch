@@ -9,10 +9,10 @@
 
 <p class="flex items-center gap-1 {status ? 'text-lime-100' : 'text-red-100'}">
     {#if status}
-        <IconPlusFill class="text-lime-500" />
+        <IconPlusFill class="text-lime-400" />
         {proText}
     {:else}
-        <IconMinusFill class="text-red-500" />
+        <IconMinusFill class="text-red-400" />
         {conText}
     {/if}
 </p>
