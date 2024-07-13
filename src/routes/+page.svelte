@@ -9,10 +9,12 @@
 </script>
 
 <svelte:head>
-    <title>FreeWatch</title>
+    <title>
+        FreeWatch - Best {platforms.length} Free Movies/Series/Anime Streaming Services
+    </title>
     <meta
         name="description"
-        content="List of free alternatives to Netflix, Amazon Prime Video, HBO Max, and Disney+. Download (and Watch Online) Movies, Series and Anime for free."
+        content="Discover the best free alternatives to Netflix, Amazon Prime Video, HBO Max, and Disney+. Stream or download movies, series, and anime for free with no ads."
     />
 </svelte:head>
 

@@ -1,13 +1,100 @@
 <script lang="ts">
     import IconCheckSquareFill from "phosphor-icons-svelte/IconCheckSquareFill.svelte"
+    import IconMinusFill from "phosphor-icons-svelte/IconMinusFill.svelte"
+    import IconPlusFill from "phosphor-icons-svelte/IconPlusFill.svelte"
     import IconSealFill from "phosphor-icons-svelte/IconSealFill.svelte"
-    import PlatformCardProsConsItem from "$lib/components/PlatformCardProsConsItem.svelte"
     import type { Platform } from "$lib/data"
     import { getPlatformScore } from "$lib/utilities/getPlatformScore"
 
     export let platform: Platform
 
     let score = getPlatformScore(platform)
+
+    let futures: {
+        text: string
+        color: "blue" | "green" | "red"
+    }[] = []
+
+    futures.push({
+        text: `Site in ${platform.languages.join(", ")}.`,
+        color: "blue",
+    })
+
+    futures.push({
+        text: `Supports ${platform.contentTypes.join(", ")}.`,
+        color: "blue",
+    })
+
+    if (platform.canDownload) {
+        futures.push({
+            text: "Can download.",
+            color: "green",
+        })
+    } else {
+        futures.push({
+            text: "Can't download.",
+            color: "red",
+        })
+    }
+
+    if (platform.canWatchOnline) {
+        futures.push({
+            text: "Can watch online.",
+            color: "green",
+        })
+    } else {
+        futures.push({
+            text: "Can't watch online.",
+            color: "red",
+        })
+    }
+
+    if (!platform.possiblyShowsAds) {
+        futures.push({
+            text: "Doesn't show ads.",
+            color: "green",
+        })
+    } else {
+        futures.push({
+            text: "Possibly shows ads.",
+            color: "red",
+        })
+    }
+
+    if (platform.isFrecuentlyUpdated) {
+        futures.push({
+            text: "Frecuently updated.",
+            color: "green",
+        })
+    } else {
+        futures.push({
+            text: "Isn't frecuently updated.",
+            color: "red",
+        })
+    }
+
+    futures.push({
+        text: "Possibly needs VPN.",
+        color: "red",
+    })
+
+    futures.push({
+        text: "Doesn't require registration.",
+        color: "green",
+    })
+
+    futures = futures.sort((a, b) => {
+        if (a.color === b.color) {
+            return 0
+        }
+        if (a.color === "blue") {
+            return -1
+        }
+        if (a.color === "green" && b.color !== "blue") {
+            return -1
+        }
+        return 0
+    })
 </script>
 
 <a
@@ -28,55 +115,25 @@
     <p class="text-2xs text-gray-400">{platform.url}</p>
     <p>{platform.description}</p>
     <ul>
-        <li class="flex items-center gap-1 text-blue-100">
-            <IconCheckSquareFill class="text-blue-400" />
-            Site in {platform.languages.join(", ")}.
-        </li>
-        <li class="flex items-center gap-1 text-blue-100">
-            <IconCheckSquareFill class="text-blue-400" />
-            Supports {platform.contentTypes.join(", ")}.
-        </li>
-        <li>
-            <PlatformCardProsConsItem
-                status={platform.canDownload}
-                proText="Can download."
-                conText="Can't download."
-            />
-        </li>
-        <li>
-            <PlatformCardProsConsItem
-                status={platform.canWatchOnline}
-                proText="Can watch online."
-                conText="Can't watch online."
-            />
-        </li>
-        <li>
-            <PlatformCardProsConsItem
-                status={!platform.possiblyShowsAds}
-                proText="Doesn't show ads."
-                conText="Possibly shows ads."
-            />
-        </li>
-        <li>
-            <PlatformCardProsConsItem
-                status={platform.isFrecuentlyUpdated}
-                proText="Frecuently updated."
-                conText="Isn't frecuently updated."
-            />
-        </li>
-        <li>
-            <PlatformCardProsConsItem
-                status={false}
-                proText="Doesn't need VPN."
-                conText="Possibly needs VPN."
-            />
-        </li>
-        <li>
-            <PlatformCardProsConsItem
-                status={true}
-                proText="Doesn't require registration."
-                conText="Requires registration."
-            />
-        </li>
+        {#each futures as future}
+            <li>
+                <p
+                    class="flex items-center gap-1 {future.color === 'blue'
+                        ? 'text-blue-100'
+                        : future.color === 'green'
+                          ? 'text-green-100'
+                          : 'text-red-100'}"
+                >
+                    {#if future.color === "blue"}
+                        <IconCheckSquareFill class="text-blue-400" />
+                    {:else if future.color === "green"}
+                        <IconPlusFill class="text-lime-400" />
+                    {:else if future.color === "red"}
+                        <IconMinusFill class="text-red-400" />
+                    {/if}
+                    {future.text}
+                </p>
+            </li>
+        {/each}
     </ul>
 </a>
