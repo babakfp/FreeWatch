@@ -25,6 +25,7 @@ export const platforms: Platform[] = [
         contentTypes: ["Anime"],
         languages: ["English"],
         canWatchOnline: true,
+        possiblyShowsAds: true,
     },
     {
         name: "Nites (BFlix)",
@@ -40,7 +41,6 @@ export const platforms: Platform[] = [
         description: "Watch (and Download) HD Movies, Series and Anime Online.",
         contentTypes: ["Movies", "Series", "Anime"],
         languages: ["English"],
-        canDownload: true,
         canWatchOnline: true,
     },
     {
@@ -49,7 +49,6 @@ export const platforms: Platform[] = [
         description: "Watch (and Download) Anime Online for Free.",
         contentTypes: ["Anime"],
         languages: ["English"],
-        canDownload: true,
         canWatchOnline: true,
     },
     {
@@ -58,7 +57,6 @@ export const platforms: Platform[] = [
         description: "Watch (and Download) Movies, Series and Anime Online.",
         contentTypes: ["Movies", "Series", "Anime"],
         languages: ["English"],
-        canDownload: true,
         canWatchOnline: true,
     },
     {
@@ -85,8 +83,8 @@ export const platforms: Platform[] = [
         description: "Watch (and Download) Movies, Series and Anime Online.",
         contentTypes: ["Movies", "Series", "Anime"],
         languages: ["English"],
-        canDownload: true,
         canWatchOnline: true,
+        possiblyShowsAds: true,
     },
     {
         name: "123Movie (1)",
@@ -94,8 +92,8 @@ export const platforms: Platform[] = [
         description: "Watch (and Download) Movies and Series Online.",
         contentTypes: ["Movies", "Series"],
         languages: ["English"],
-        canDownload: true,
         canWatchOnline: true,
+        possiblyShowsAds: true,
     },
     {
         name: "123Movie (2)",
@@ -103,7 +101,6 @@ export const platforms: Platform[] = [
         description: "Watch (and Download) Movies and Series Online.",
         contentTypes: ["Movies", "Series"],
         languages: ["English"],
-        canDownload: true,
         canWatchOnline: true,
     },
     {

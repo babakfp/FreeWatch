@@ -9,8 +9,24 @@ export const getPlatformScore = (platform: Platform) => {
     if (platform.canWatchOnline) {
         score += 1
     }
+
     if (platform.possiblyShowsAds) {
         score -= 1
+    } else {
+        score += 1
+    }
+
+    if (platform.languages.includes("English")) {
+        score += 1
+    } else {
+        score -= 1
+    }
+
+    if (
+        platform.contentTypes.length === 1 &&
+        platform.contentTypes.includes("Anime")
+    ) {
+        score += 2
     }
 
     score += platform.languages.length
