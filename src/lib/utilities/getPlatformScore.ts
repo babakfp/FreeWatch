@@ -29,6 +29,12 @@ export const getPlatformScore = (platform: Platform) => {
         score += 2
     }
 
+    if (platform.isFrecuentlyUpdated) {
+        score += 1
+    } else {
+        score -= 1
+    }
+
     score += platform.languages.length
     score += platform.contentTypes.length
 
