@@ -126,4 +126,14 @@ export const platforms: Platform[] = [
         possiblyShowsAds: true,
         isFrecuentlyUpdated: false,
     },
+    {
+        name: "AnimePahe",
+        url: "https://animepahe.ru",
+        description: "Watch Anime Online for Free.",
+        contentTypes: ["Anime"],
+        languages: ["English"],
+        canDownload: true,
+        canWatchOnline: true,
+        isFrecuentlyUpdated: true,
+    },
 ]
