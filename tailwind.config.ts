@@ -9,6 +9,7 @@ export default {
         extend: {
             colors: {
                 gray: colors.zinc,
+                accent: "#707cc0",
             },
         },
         container: {
