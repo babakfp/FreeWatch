@@ -24,6 +24,7 @@
             <span class="absolute text-xs font-bold inset-center">{score}</span>
         </div>
     </div>
+    <p class="text-2xs text-gray-400">{platform.url}</p>
     <p>{platform.description}</p>
     <ul>
         <li>Site in {platform.languages.join(", ")}.</li>
