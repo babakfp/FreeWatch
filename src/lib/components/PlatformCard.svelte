@@ -8,7 +8,7 @@
 
     export let platform: Platform
 
-    let score = getPlatformScore(platform)
+    const score = getPlatformScore(platform)
 
     let futures: {
         text: string
