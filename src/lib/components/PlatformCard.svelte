@@ -61,14 +61,14 @@
         })
     }
 
-    if (platform.isFrecuentlyUpdated) {
+    if (platform.isFrequentlyUpdated) {
         futures.push({
-            text: "Frecuently updated.",
+            text: "Frequently updated.",
             color: "green",
         })
     } else {
         futures.push({
-            text: "Isn't frecuently updated.",
+            text: "Isn't Frequently updated.",
             color: "red",
         })
     }

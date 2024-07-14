@@ -7,7 +7,7 @@ export type Platform = {
     canDownload?: boolean
     canWatchOnline?: boolean
     possiblyShowsAds?: boolean
-    isFrecuentlyUpdated?: boolean
+    isFrequentlyUpdated?: boolean
 }
 
 export const platforms: Platform[] = [
@@ -18,7 +18,7 @@ export const platforms: Platform[] = [
         contentTypes: ["Movies", "Series", "Anime"],
         languages: ["Persian"],
         canDownload: true,
-        isFrecuentlyUpdated: true,
+        isFrequentlyUpdated: true,
     },
     {
         name: "HiAnime",
@@ -28,7 +28,7 @@ export const platforms: Platform[] = [
         languages: ["English"],
         canWatchOnline: true,
         possiblyShowsAds: true,
-        isFrecuentlyUpdated: true,
+        isFrequentlyUpdated: true,
     },
     {
         name: "Nites (BFlix)",
@@ -37,7 +37,7 @@ export const platforms: Platform[] = [
         contentTypes: ["Movies", "Series"],
         languages: ["English"],
         canWatchOnline: true,
-        isFrecuentlyUpdated: true,
+        isFrequentlyUpdated: true,
     },
     {
         name: "MyFlixer",
@@ -46,7 +46,7 @@ export const platforms: Platform[] = [
         contentTypes: ["Movies", "Series", "Anime"],
         languages: ["English"],
         canWatchOnline: true,
-        isFrecuentlyUpdated: true,
+        isFrequentlyUpdated: true,
     },
     {
         name: "9AnimeTV",
@@ -55,7 +55,7 @@ export const platforms: Platform[] = [
         contentTypes: ["Anime"],
         languages: ["English"],
         canWatchOnline: true,
-        isFrecuentlyUpdated: true,
+        isFrequentlyUpdated: true,
     },
     {
         name: "ZoeChip",
@@ -64,7 +64,7 @@ export const platforms: Platform[] = [
         contentTypes: ["Movies", "Series", "Anime"],
         languages: ["English"],
         canWatchOnline: true,
-        isFrecuentlyUpdated: true,
+        isFrequentlyUpdated: true,
     },
     {
         name: "UFlix",
@@ -73,7 +73,7 @@ export const platforms: Platform[] = [
         contentTypes: ["Movies", "Series", "Anime"],
         languages: ["English"],
         canWatchOnline: true,
-        isFrecuentlyUpdated: true,
+        isFrequentlyUpdated: true,
     },
     {
         name: "1337x",
@@ -84,7 +84,7 @@ export const platforms: Platform[] = [
         canDownload: true,
         canWatchOnline: true,
         possiblyShowsAds: true,
-        isFrecuentlyUpdated: true,
+        isFrequentlyUpdated: true,
     },
     {
         name: "Movies2Watch",
@@ -94,7 +94,7 @@ export const platforms: Platform[] = [
         languages: ["English"],
         canWatchOnline: true,
         possiblyShowsAds: true,
-        isFrecuentlyUpdated: true,
+        isFrequentlyUpdated: true,
     },
     {
         name: "123Movie (1)",
@@ -104,7 +104,7 @@ export const platforms: Platform[] = [
         languages: ["English"],
         canWatchOnline: true,
         possiblyShowsAds: true,
-        isFrecuentlyUpdated: false,
+        isFrequentlyUpdated: false,
     },
     {
         name: "123Movie (2)",
@@ -113,7 +113,7 @@ export const platforms: Platform[] = [
         contentTypes: ["Movies", "Series"],
         languages: ["English"],
         canWatchOnline: true,
-        isFrecuentlyUpdated: false,
+        isFrequentlyUpdated: false,
     },
     {
         name: "Soaper",
@@ -124,7 +124,7 @@ export const platforms: Platform[] = [
         canDownload: true,
         canWatchOnline: true,
         possiblyShowsAds: true,
-        isFrecuentlyUpdated: false,
+        isFrequentlyUpdated: false,
     },
     {
         name: "AnimePahe",
@@ -134,6 +134,6 @@ export const platforms: Platform[] = [
         languages: ["English"],
         canDownload: true,
         canWatchOnline: true,
-        isFrecuentlyUpdated: true,
+        isFrequentlyUpdated: true,
     },
 ]

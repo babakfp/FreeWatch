@@ -21,7 +21,7 @@ export const getPlatformScore = (platform: Platform) => {
         score += 1
     }
 
-    if (platform.isFrecuentlyUpdated) {
+    if (platform.isFrequentlyUpdated) {
         score += 1
     } else {
         score -= 1
