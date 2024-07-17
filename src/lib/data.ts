@@ -137,3 +137,17 @@ export const platforms: Platform[] = [
         isFrequentlyUpdated: true,
     },
 ]
+
+export type Website = {
+    name: string
+    description: string
+    url: string
+}
+
+export const websites: Website[] = [
+    {
+        name: "FMHY",
+        description: "The largest collection of free stuff on the internet.",
+        url: "https://fmhy.pages.dev/videopiracyguide",
+    },
+]

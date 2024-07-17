@@ -1,6 +1,7 @@
 <script lang="ts">
     import PlatformCard from "$lib/components/PlatformCard.svelte"
-    import { platforms } from "$lib/data.js"
+    import WebsiteCard from "$lib/components/WebsiteCard.svelte"
+    import { platforms, websites } from "$lib/data.js"
     import { getPlatformScore } from "$lib/utilities/getPlatformScore"
 
     const platformsToShow = platforms.sort(
@@ -18,11 +19,18 @@
     />
 </svelte:head>
 
-<main class="container pb-16 pt-8">
+<main class="container grid gap-8 pb-16 pt-8">
     <ul class="grid gap-4">
         {#each platformsToShow as platform}
             <li>
                 <PlatformCard {platform} />
+            </li>
+        {/each}
+    </ul>
+    <ul class="grid gap-4">
+        {#each websites as website}
+            <li>
+                <WebsiteCard {website} />
             </li>
         {/each}
     </ul>
