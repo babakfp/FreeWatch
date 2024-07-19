@@ -6,6 +6,9 @@
     * {
         @apply select-none outline-none drag-none;
     }
+    html {
+        scrollbar-color: theme(colors.accent) theme(colors.gray.800);
+    }
 }
 
 @layer utilities {
