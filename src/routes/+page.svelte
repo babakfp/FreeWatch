@@ -20,14 +20,17 @@
 </svelte:head>
 
 <main class="container grid gap-8 pb-16 pt-8">
-    <ul class="grid gap-4">
+    <h2 class="text-2xl font-bold">Platforms</h2>
+    <ul class="-mt-4 grid gap-4">
         {#each platformsToShow as platform}
             <li>
                 <PlatformCard {platform} />
             </li>
         {/each}
     </ul>
-    <ul class="grid gap-4">
+
+    <h2 class="text-2xl font-bold">Find more Platforms</h2>
+    <ul class="-mt-4 grid gap-4">
         {#each websites as website}
             <li>
                 <WebsiteCard {website} />
