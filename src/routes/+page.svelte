@@ -29,7 +29,7 @@
         {/each}
     </ul>
 
-    <h2 class="text-2xl font-bold">Find more Platforms</h2>
+    <h2 class="text-2xl font-bold">More platforms</h2>
     <ul class="-mt-4 grid gap-4">
         {#each websites as website}
             <li>
