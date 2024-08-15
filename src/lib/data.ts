@@ -55,6 +55,7 @@ export const platforms: Platform[] = [
         contentTypes: ["Anime"],
         languages: ["English"],
         canWatchOnline: true,
+        possiblyShowsAds: true,
         isFrequentlyUpdated: true,
     },
     {
