@@ -11,24 +11,30 @@
             <a
                 class="text-accent underline"
                 href="https://babakfp.ir"
-                target="_blank">Babak</a
-            >.
+                target="_blank"
+            >
+                Babak
+            </a>
         </li>
         <li>
             Source code on
             <a
                 class="text-accent underline"
                 href="https://github.com/babakfp/FreeWatch"
-                target="_blank">GitHub</a
-            >.
+                target="_blank"
+            >
+                GitHub
+            </a>
         </li>
         <li>
             Favicon by
             <a
                 class="text-accent underline"
                 href="https://icons8.com"
-                target="_blank">Icon8</a
-            >.
+                target="_blank"
+            >
+                Icon8
+            </a>
         </li>
     </ul>
 </footer>
