@@ -1,6 +1,6 @@
 import type { Config } from "tailwindcss"
 import { allAddons } from "tailwindcss-addons"
-import colors from "tailwindcss/colors"
+import { neutral } from "tailwindcss/colors"
 
 export default {
     content: ["./src/**/*.{html,svelte}"],
@@ -8,7 +8,7 @@ export default {
     theme: {
         extend: {
             colors: {
-                gray: colors.zinc,
+                gray: neutral,
                 accent: "#707cc0",
             },
         },
