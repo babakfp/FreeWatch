@@ -10,80 +10,80 @@
 
     const score = getPlatformScore(platform)
 
-    let futures: {
+    let features: {
         text: string
         color: "blue" | "green" | "red"
     }[] = []
 
-    futures.push({
+    features.push({
         text: `Site in ${platform.languages.join(", ")}.`,
         color: "blue",
     })
 
-    futures.push({
+    features.push({
         text: `Supports ${platform.contentTypes.join(", ")}.`,
         color: "blue",
     })
 
     if (platform.canDownload) {
-        futures.push({
+        features.push({
             text: "Can download.",
             color: "green",
         })
     } else {
-        futures.push({
+        features.push({
             text: "Can't download.",
             color: "red",
         })
     }
 
     if (platform.canWatchOnline) {
-        futures.push({
+        features.push({
             text: "Can watch online.",
             color: "green",
         })
     } else {
-        futures.push({
+        features.push({
             text: "Can't watch online.",
             color: "red",
         })
     }
 
     if (!platform.possiblyShowsAds) {
-        futures.push({
+        features.push({
             text: "Doesn't show ads.",
             color: "green",
         })
     } else {
-        futures.push({
+        features.push({
             text: "Possibly shows ads.",
             color: "red",
         })
     }
 
     if (platform.isFrequentlyUpdated) {
-        futures.push({
+        features.push({
             text: "Frequently updated.",
             color: "green",
         })
     } else {
-        futures.push({
+        features.push({
             text: "Isn't Frequently updated.",
             color: "red",
         })
     }
 
-    futures.push({
+    features.push({
         text: "Possibly needs VPN.",
         color: "red",
     })
 
-    futures.push({
+    features.push({
         text: "Doesn't require registration.",
         color: "green",
     })
 
-    futures = futures.sort((a, b) => {
+    features = features.sort((a, b) => {
         if (a.color === b.color) {
             return 0
         }
@@ -114,24 +114,24 @@
     </div>
     <p class="text-2xs text-gray-400">{platform.url}</p>
     <p>{platform.description}</p>
-    <ul>
-        {#each futures as future}
+    <ul class="space-y-0.5">
+        {#each features as feature}
             <li>
                 <p
-                    class="flex items-center gap-1 {future.color === 'blue'
+                    class="flex items-center gap-1 {feature.color === 'blue'
                         ? 'text-blue-100'
-                        : future.color === 'green'
+                        : feature.color === 'green'
                           ? 'text-green-100'
                           : 'text-red-100'}"
                 >
-                    {#if future.color === "blue"}
+                    {#if feature.color === "blue"}
                         <IconCheckSquareFill class="text-blue-400" />
-                    {:else if future.color === "green"}
+                    {:else if feature.color === "green"}
                         <IconPlusFill class="text-lime-400" />
-                    {:else if future.color === "red"}
+                    {:else if feature.color === "red"}
                         <IconMinusFill class="text-red-400" />
                     {/if}
-                    {future.text}
+                    <span class="text-sm">{feature.text}</span>
                 </p>
             </li>
         {/each}
