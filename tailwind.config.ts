@@ -6,7 +6,6 @@ import { fontWeight } from "tailwindcss/defaultTheme"
 
 export default {
     content: ["./src/**/*.{html,svelte}"],
-    plugins: [...allAddons()],
     theme: {
         extend: {
             colors: {
@@ -31,4 +30,5 @@ export default {
         hoverOnlyWhenSupported: true,
         disableColorOpacityUtilitiesByDefault: true,
     },
+    plugins: [...allAddons()],
 } satisfies Config
