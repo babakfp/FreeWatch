@@ -14,6 +14,7 @@
 
     const score = getPlatformScore(platform)
 
+    // NOTE: If you see a worning, it means Svelte is trash and thinks that this should be a rune. LOL.
     let features: {
         text: string
         color: "blue" | "green" | "red"
