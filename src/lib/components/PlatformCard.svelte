@@ -14,81 +14,65 @@
 
     const score = getPlatformScore(platform)
 
-    // NOTE: If you see a worning, it means Svelte is trash and thinks that this should be a rune. LOL.
-    let features: {
+    type Feature = {
         text: string
         color: "blue" | "green" | "red"
-    }[] = []
-
-    features.push({
-        text: `Site in ${platform.languages.join(", ")}.`,
-        color: "blue",
-    })
-
-    features.push({
-        text: `Supports ${platform.contentTypes.join(", ")}.`,
-        color: "blue",
-    })
-
-    if (platform.canDownload) {
-        features.push({
-            text: "Can download.",
-            color: "green",
-        })
-    } else {
-        features.push({
-            text: "Can't download.",
-            color: "red",
-        })
     }
 
-    if (platform.canWatchOnline) {
-        features.push({
-            text: "Can watch online.",
-            color: "green",
-        })
-    } else {
-        features.push({
-            text: "Can't watch online.",
+    const features: Feature[] = [
+        {
+            text: `Site in ${platform.languages.join(", ")}.`,
+            color: "blue",
+        },
+        {
+            text: `Supports ${platform.contentTypes.join(", ")}.`,
+            color: "blue",
+        },
+        platform.canDownload ?
+            {
+                text: "Can download.",
+                color: "green",
+            }
+        :   {
+                text: "Can't download.",
+                color: "red",
+            },
+        platform.canWatchOnline ?
+            {
+                text: "Can watch online.",
+                color: "green",
+            }
+        :   {
+                text: "Can't watch online.",
+                color: "red",
+            },
+        !platform.possiblyShowsAds ?
+            {
+                text: "Doesn't show ads.",
+                color: "green",
+            }
+        :   {
+                text: "Possibly shows ads.",
+                color: "red",
+            },
+        platform.isFrequentlyUpdated ?
+            {
+                text: "Frequently updated.",
+                color: "green",
+            }
+        :   {
+                text: "Isn't Frequently updated.",
+                color: "red",
+            },
+        {
+            text: "Possibly needs VPN.",
             color: "red",
-        })
-    }
-
-    if (!platform.possiblyShowsAds) {
-        features.push({
-            text: "Doesn't show ads.",
+        },
+        {
+            text: "Doesn't require registration.",
             color: "green",
-        })
-    } else {
-        features.push({
-            text: "Possibly shows ads.",
-            color: "red",
-        })
-    }
-
-    if (platform.isFrequentlyUpdated) {
-        features.push({
-            text: "Frequently updated.",
-            color: "green",
-        })
-    } else {
-        features.push({
-            text: "Isn't Frequently updated.",
-            color: "red",
-        })
-    }
-
-    features.push({
-        text: "Possibly needs VPN.",
-        color: "red",
-    })
-
-    features.push({
-        text: "Doesn't require registration.",
-        color: "green",
-    })
-
-    features = features.sort((a, b) => {
+        },
+    ].sort((a, b) => {
         if (a.color === b.color) {
             return 0
         }
@@ -99,7 +83,7 @@
             return -1
         }
         return 0
-    })
+    }) as Feature[] // NOTE: Fuck TypeScript.
 </script>
 
 <a
@@ -123,11 +107,10 @@
         {#each features as feature}
             <li>
                 <p
-                    class="flex items-center gap-1 {feature.color === 'blue'
-                        ? 'text-blue-100'
-                        : feature.color === 'green'
-                          ? 'text-green-100'
-                          : 'text-red-100'}"
+                    class="flex items-center gap-1 {feature.color === 'blue' ?
+                        'text-blue-100'
+                    : feature.color === 'green' ? 'text-green-100'
+                    : 'text-red-100'}"
                 >
                     {#if feature.color === "blue"}
                         <IconCheckSquareFill class="text-blue-400" />
