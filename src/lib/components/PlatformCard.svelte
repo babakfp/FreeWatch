@@ -6,7 +6,11 @@
     import type { Platform } from "$lib/data"
     import { getPlatformScore } from "$lib/utilities/getPlatformScore"
 
-    export let platform: Platform
+    let {
+        platform,
+    }: {
+        platform: Platform
+    } = $props()
 
     const score = getPlatformScore(platform)
 

@@ -1,7 +1,11 @@
 <script lang="ts">
     import type { Website } from "$lib/data"
 
-    export let website: Website
+    let {
+        website,
+    }: {
+        website: Website
+    } = $props()
 </script>
 
 <a
