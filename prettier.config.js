@@ -14,4 +14,5 @@ export default {
         "^\\$lib/",
         "^[.]",
     ],
+    experimentalTernaries: true,
 }
