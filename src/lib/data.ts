@@ -9,7 +9,6 @@ export type Platform = {
     possiblyShowsAds?: boolean
     isFrequentlyUpdated?: boolean
 }
-
 export const platforms: Platform[] = [
     {
         name: "AIO.FILM",
@@ -109,6 +108,19 @@ export const platforms: Platform[] = [
         canDownload: true,
         canWatchOnline: true,
         isFrequentlyUpdated: true,
+    },
+]
+
+export type LazyPlatform = {
+    url: `https://${string}.${string}`
+}
+
+export const lazyPlatforms: LazyPlatform[] = [
+    {
+        url: "https://nitestv.org",
+    },
+    {
+        url: "https://soapertv.tv",
     },
 ]
 

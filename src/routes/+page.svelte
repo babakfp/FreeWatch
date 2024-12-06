@@ -1,7 +1,7 @@
 <script lang="ts">
     import PlatformCard from "$lib/components/PlatformCard.svelte"
     import WebsiteCard from "$lib/components/WebsiteCard.svelte"
-    import { platforms, websites } from "$lib/data.js"
+    import { lazyPlatforms, platforms, websites } from "$lib/data.js"
     import { getPlatformScore } from "$lib/utilities/getPlatformScore"
 
     const platformsToShow = platforms.sort(
@@ -19,31 +19,52 @@
     />
 </svelte:head>
 
-<main class="container grid gap-8 pb-16 pt-8">
-    <h2 class="text-2xl font-bold">Platforms</h2>
-    <ul class="-mt-4 grid gap-4">
-        {#each platformsToShow as platform}
-            <li>
-                <PlatformCard {platform} />
-            </li>
-        {/each}
-    </ul>
+<main class="container space-y-12 pb-16 pt-8">
+    <section class="space-y-4">
+        <h2 class="text-2xl font-bold">Platforms</h2>
+        <ul class="grid gap-4">
+            {#each platformsToShow as platform}
+                <li>
+                    <PlatformCard {platform} />
+                </li>
+            {/each}
+        </ul>
+    </section>
 
-    <h2 class="text-2xl font-bold">More platforms</h2>
-    <ul class="-mt-4 grid gap-4">
-        {#each websites as website}
-            <li>
-                <WebsiteCard {website} />
-            </li>
-        {/each}
-    </ul>
+    <section class="space-y-4">
+        <h2 class="text-2xl font-bold">Find more platforms</h2>
+        <ul class="mt-8 grid gap-4">
+            {#each websites as website}
+                <li>
+                    <WebsiteCard {website} />
+                </li>
+            {/each}
+        </ul>
+    </section>
 
-    <div>
+    <section>
+        <h2 class="text-2xl font-bold">More platforms</h2>
+        <p class="mt-4">I don't know much about these.</p>
+        <ul class="mt-4 list-inside list-disc space-y-1">
+            {#each lazyPlatforms as platform}
+                <li>
+                    <a
+                        href={platform.url.replace("https://", "")}
+                        class="underline"
+                    >
+                        {platform.url}
+                    </a>
+                </li>
+            {/each}
+        </ul>
+    </section>
+
+    <section>
         <h2 class="text-2xl font-bold">How to find more platforms?</h2>
         <p class="mt-2">Just google. Instagram too.</p>
-    </div>
+    </section>
 
-    <div>
+    <section>
         <h2 class="text-2xl font-bold">How to block ads?</h2>
         <p class="mt-2">
             Download <a
@@ -52,5 +73,5 @@
                 >uBlock Origin</a
             > Chrome extension.
         </p>
-    </div>
+    </section>
 </main>
