@@ -5,6 +5,7 @@
     import IconSealFill from "phosphor-icons-svelte/IconSealFill.svelte"
     import type { Platform } from "$lib/data"
     import { getPlatformScore } from "$lib/utilities/getPlatformScore"
+    import ExternalLink from "./ExternalLink.svelte"
 
     let {
         platform,
@@ -86,11 +87,9 @@
     }) as Feature[] // NOTE: Fuck TypeScript.
 </script>
 
-<a
+<ExternalLink
     class="grid gap-2 rounded bg-gray-800 p-4 ring-accent hover:ring focus-visible:ring sm:p-6"
     href={platform.url}
-    target="_blank"
-    rel="noopener noreferrer nofollow"
 >
     <div class="relative">
         <h3 class="text-xl font-bold">
@@ -124,4 +123,4 @@
             </li>
         {/each}
     </ul>
-</a>
+</ExternalLink>
