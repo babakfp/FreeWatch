@@ -30,8 +30,8 @@ importers:
         specifier: 7.0.6
         version: 7.0.6(postcss@8.4.49)
       phosphor-icons-svelte:
-        specifier: 2.0.0
-        version: 2.0.0(svelte@5.7.1)
+        specifier: 2.0.2
+        version: 2.0.2(svelte@5.7.1)
       postcss:
         specifier: 8.4.49
         version: 8.4.49
@@ -1022,8 +1022,8 @@ packages:
     resolution: {integrity: sha512-Xa4Nw17FS9ApQFJ9umLiJS4orGjm7ZzwUrwamcGQuHSzDyth9boKDaycYdDcZDuqYATXw4HFXgaqWTctW/v1HA==}
     engines: {node: '>=16 || 14 >=14.18'}
 
-  phosphor-icons-svelte@2.0.0:
-    resolution: {integrity: sha512-1ETu5+hLJl6bfcK8SGubNylQOgC/VE67TXucGnkN1nXfdCgRMu9dtS56W7L5wk8rKtqiviNGiB6X81Ww/EJlEw==}
+  phosphor-icons-svelte@2.0.2:
+    resolution: {integrity: sha512-Aw+2eRrlOMHJiNGKjbBmQnH3cm89Sp1KeyTLtGftgfO2flxQOjgtLf9xzNAivKJJchrz4b9dcwPBVe/ftvsnmw==}
     peerDependencies:
       svelte: '>= 5'
 
@@ -2479,7 +2479,7 @@ snapshots:
       lru-cache: 10.4.3
       minipass: 7.1.2
 
-  phosphor-icons-svelte@2.0.0(svelte@5.7.1):
+  phosphor-icons-svelte@2.0.2(svelte@5.7.1):
     dependencies:
       svelte: 5.7.1
 

@@ -15,7 +15,7 @@
         "@types/node": "^22.10.1",
         "autoprefixer": "10.4.20",
         "cssnano": "7.0.6",
-        "phosphor-icons-svelte": "2.0.0",
+        "phosphor-icons-svelte": "2.0.2",
         "postcss": "8.4.49",
         "prettier": "3.4.2",
         "prettier-plugin-svelte": "3.3.2",
