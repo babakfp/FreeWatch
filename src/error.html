@@ -1,11 +1,9 @@
 <!doctype html>
-<html
-    class="select-none scrollbar-thumb-accent scrollbar-track-gray-800 scrollbar-thin"
-    lang="en"
->
+<html class="select-none scrollbar-thin" lang="en">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>%sveltekit.status%</title>
         <link rel="icon" href="/favicon.png" />
         <link
             rel="preload"
@@ -24,9 +22,16 @@
                     format("woff2-variations");
             }
         </style>
-        %sveltekit.head%
+        <link rel="stylesheet" href="/error.html.css" />
     </head>
     <body class="bg-gray-900 text-gray-100">
-        <div class="contents">%sveltekit.body%</div>
+        <div class="contents">
+            <main
+                class="container grid min-h-svh content-center items-center gap-2 py-8 text-center"
+            >
+                <h1 class="text-4xl font-extrablack">%sveltekit.status%</h1>
+                <p>%sveltekit.error.message%</p>
+            </main>
+        </div>
     </body>
 </html>
