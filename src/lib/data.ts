@@ -31,15 +31,6 @@ export const platforms: Platform[] = [
         isFrequentlyUpdated: true,
     },
     {
-        name: "Nites (BFlix)",
-        url: "https://w1.nites.is",
-        description: "Watch Movies and Shows Online for Free.",
-        contentTypes: ["Movies", "Series"],
-        languages: ["English"],
-        canWatchOnline: true,
-        isFrequentlyUpdated: true,
-    },
-    {
         name: "MyFlixer",
         url: "https://myflixer.gs",
         description: "Watch (and Download) HD Movies, Series and Anime Online.",
