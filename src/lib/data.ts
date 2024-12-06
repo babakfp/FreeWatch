@@ -100,17 +100,6 @@ export const platforms: Platform[] = [
         isFrequentlyUpdated: true,
     },
     {
-        name: "Soaper",
-        url: "https://soaper.tv",
-        description: "Watch (and Download) Movies and Series Online.",
-        contentTypes: ["Movies", "Series"],
-        languages: ["English"],
-        canDownload: true,
-        canWatchOnline: true,
-        possiblyShowsAds: true,
-        isFrequentlyUpdated: false,
-    },
-    {
         name: "AnimePahe",
         url: "https://animepahe.ru",
         description: "Watch Anime Online for Free.",
