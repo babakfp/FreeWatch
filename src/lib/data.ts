@@ -120,6 +120,16 @@ export const platforms: Platform[] = [
         canWatchOnline: true,
         isFrequentlyUpdated: true,
     },
+    {
+        name: "AniLab",
+        url: "https://anilab.to",
+        description: "Best Anime App for Android and iOS.",
+        contentTypes: ["Anime"],
+        languages: ["English"],
+        canDownload: true,
+        canWatchOnline: true,
+        isFrequentlyUpdated: true,
+    },
 ]
 
 export type Website = {
