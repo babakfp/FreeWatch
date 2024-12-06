@@ -1,4 +1,5 @@
 <script lang="ts">
+    import ExternalLink from "$lib/components/ExternalLink.svelte"
     import PlatformCard from "$lib/components/PlatformCard.svelte"
     import WebsiteCard from "$lib/components/WebsiteCard.svelte"
     import { lazyPlatforms, platforms, websites } from "$lib/data.js"
@@ -48,12 +49,9 @@
         <ul class="mt-4 list-inside list-disc space-y-1">
             {#each lazyPlatforms as platform}
                 <li>
-                    <a
-                        href={platform.url.replace("https://", "")}
-                        class="underline"
-                    >
-                        {platform.url}
-                    </a>
+                    <ExternalLink class="underline" href={platform.url}>
+                        {platform.url.replace("https://", "")}
+                    </ExternalLink>
                 </li>
             {/each}
         </ul>
