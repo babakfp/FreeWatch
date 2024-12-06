@@ -37,4 +37,20 @@
             </li>
         {/each}
     </ul>
+
+    <div>
+        <h2 class="text-2xl font-bold">How to find more platforms?</h2>
+        <p class="mt-2">Just google. Instagram too.</p>
+    </div>
+
+    <div>
+        <h2 class="text-2xl font-bold">How to block ads?</h2>
+        <p class="mt-2">
+            Download <a
+                class="underline"
+                href="https://chromewebstore.google.com/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm"
+                >uBlock Origin</a
+            > Chrome extension.
+        </p>
+    </div>
 </main>
