@@ -2,10 +2,11 @@
 export default {
     semi: false,
     tabWidth: 4,
+    experimentalTernaries: true,
     plugins: [
         "prettier-plugin-svelte",
-        "prettier-plugin-tailwindcss",
         "@ianvs/prettier-plugin-sort-imports",
+        "prettier-plugin-tailwindcss",
     ],
     importOrder: [
         "^@",
@@ -14,5 +15,4 @@ export default {
         "^\\$lib/",
         "^[.]",
     ],
-    experimentalTernaries: true,
 }
