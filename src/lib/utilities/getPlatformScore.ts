@@ -30,8 +30,8 @@ export const getPlatformScore = (platform: Platform) => {
     score += platform.contentTypes.length
 
     if (
-        platform.contentTypes.length === 1 &&
-        platform.contentTypes.includes("Anime")
+        platform.contentTypes.length === 1
+        && platform.contentTypes.includes("Anime")
     ) {
         score += 2
     }

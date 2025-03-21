@@ -3,4 +3,4 @@
 /.svelte-kit/
 /.vercel/
 /vite.config.*.timestamp-*
-/static/error.html.css
+/static/error.css

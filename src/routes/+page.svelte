@@ -20,7 +20,7 @@
     />
 </svelte:head>
 
-<main class="container space-y-12 pb-16 pt-8">
+<main class="container space-y-12 pt-8 pb-16">
     <section class="space-y-4">
         <h2 class="text-2xl font-bold">Platforms</h2>
         <ul class="grid gap-4">

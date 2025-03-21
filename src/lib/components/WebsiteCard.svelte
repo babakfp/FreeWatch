@@ -10,7 +10,7 @@
 </script>
 
 <ExternalLink
-    class="grid gap-2 rounded bg-gray-800 p-4 ring-accent hover:ring focus-visible:ring sm:p-6"
+    class="ring-accent grid gap-2 rounded-sm bg-gray-800 p-4 hover:ring-3 focus-visible:ring-3 sm:p-6"
     href={website.url}
 >
     <h3 class="text-xl font-bold">{website.name}</h3>

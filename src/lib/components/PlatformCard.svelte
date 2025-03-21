@@ -88,16 +88,16 @@
 </script>
 
 <ExternalLink
-    class="grid gap-2 rounded bg-gray-800 p-4 ring-accent hover:ring focus-visible:ring sm:p-6"
+    class="ring-accent grid gap-2 rounded-sm bg-gray-800 p-4 hover:ring-3 focus-visible:ring-3 sm:p-6"
     href={platform.url}
 >
     <div class="relative">
         <h3 class="text-xl font-bold">
             {platform.name}
         </h3>
-        <div class="absolute -right-2 -top-2">
+        <div class="absolute -top-2 -right-2">
             <IconSealFill class="text-4xl text-gray-600" />
-            <span class="absolute text-xs font-bold inset-center">{score}</span>
+            <span class="inset-center absolute text-xs font-bold">{score}</span>
         </div>
     </div>
     <p class="text-2xs text-gray-400">{platform.url}</p>
